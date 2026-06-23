@@ -7,11 +7,16 @@
   padding: 0 20px !important; /* Matches the inner grid padding of your list container */
 }
 
+.text {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+}
+
 /* Base Layout & Typography */
 body {
   background-color: #121212 !important;
   color: #e0e0e0 !important;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 12px !important;
 }
 
 /* Main Container Elevation & Width Locking */
@@ -55,11 +60,11 @@ body {
   gap: 4px !important;
 }
 
-/* Premium Pill Button Redesign */
+/* Pill Button Redesign */
 .status-menu-container .status-menu .status-button {
   color: #a1a1aa !important;
   font-weight: 500 !important;
-  font-size: 13px !important;
+  font-size: 1.2em !important;
   padding: 6px 14px !important;
   margin: 0 !important;
   border-radius: 20px !important;
@@ -84,7 +89,7 @@ body {
   background-color: rgba(255, 255, 255, 0.05) !important;
 }
 
-/* Premium Active Pill State (Replaces the harsh blue bar look) */
+/* Active Pill State (Replaces the harsh blue bar look) */
 .status-menu-container .status-menu .status-button.on {
   color: #ffffff !important;
   font-weight: 600 !important;
@@ -155,6 +160,7 @@ body {
 .header-title .link.sort {
   color: #a1a1aa !important;
   transition: color 0.2s ease;
+  font-size: 11px !important;
 }
 
 .header-title .link:hover {
@@ -189,7 +195,7 @@ body {
   padding: 10px 0 !important;
 }
 
-/* Premium Typography & Links */
+/* Typography & Links */
 a {
   color: #79a1eb !important;
   text-decoration: none;
@@ -245,7 +251,7 @@ a:hover {
   border: none !important;
   outline: none !important;
   color: #ffffff !important;
-  font-size: 12px !important;
+  font-size: 1.2em !important;
   padding: 0 0 0 14px !important;
   margin: 0 !important;
 }
