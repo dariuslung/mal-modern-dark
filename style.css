@@ -283,6 +283,12 @@ a:hover {
     padding-top: 0 !important;
 }
 
+/* --- FIXED: Prevent Title Overlap with Edit Controls --- */
+.list-table .list-table-data .data.title {
+  padding-right: 90px !important; /* Injects an invisible safety wall on the right */
+  box-sizing: border-box !important;
+}
+
 /* Smooth Thumbnail Zoom Feature */
 .list-table .list-table-data .data.image {
   overflow: visible !important;
@@ -313,10 +319,13 @@ a:hover {
   gap: 5px !important;
 }
 
-/* Misc UI Cleanups */
+/* More Container */
 .edit-disabled, 
 .more-content {
   color: #a1a1aa !important;
+}
+.more-info {
+  border-bottom: 0 !important;
 }
 
 footer {
