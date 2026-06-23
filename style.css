@@ -1,3 +1,12 @@
+/* Page Header Alignment */
+.header {
+  max-width: 1024px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  margin: 0 auto !important;
+  padding: 0 20px !important; /* Matches the inner grid padding of your list container */
+}
+
 /* Base Layout & Typography */
 body {
   background-color: #121212 !important;
@@ -108,9 +117,7 @@ body {
 .list-stats {
   width: 100% !important;
   box-sizing: border-box !important;
-  margin: 0 0 16px 0 !important; /* Pushes downstream data table down safely */
   background-color: #4065BA !important; /* Preserves uniform panel background */
-  border-radius: 0 0 8px 8px !important;
 }
 
 /* Sibling configuration: if stats is closed, add structural margin directly to the table */
@@ -268,6 +275,11 @@ a:hover {
 #search-button .fa-magnifying-glass {
   font-size: 13px !important;
   display: inline-block !important;
+}
+
+/* Cover Image */
+#cover-image-container {
+    padding-top: 0 !important;
 }
 
 /* Smooth Thumbnail Zoom Feature */
