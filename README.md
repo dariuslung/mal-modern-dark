@@ -1,0 +1,18 @@
+# MyAnimeList List Style - Modern Dark
+
+A sleek, premium, performance-optimized dark theme overhaul for MyAnimeList. This theme focuses on modern typography, clean borderless headers, custom animated interactions, and dynamic thumbnail zoom scaling.
+
+## Preview
+
+<img width="1117" height="610" alt="image" src="https://github.com/user-attachments/assets/af38751f-a31f-41e5-82d4-63a7f8d857ca" />
+
+## Installation
+
+Getting the styles running on your list takes less than a minute.
+
+1. Copy the entire contents of the `styles.css` file in this repository.
+2. Go to your **MyAnimeList Account Settings**.
+3. Navigate to **List Style Design** (Ensure you are using a modern list style template format).
+4. Click on **Advanced CSS Styles**.
+5. Paste the copied CSS code into the custom stylesheet input box.
+6. Click **Save/Update**.
