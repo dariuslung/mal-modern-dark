@@ -1,0 +1,135 @@
+/* Base Layout & Typography */
+body {
+    background-color: #121212 !important;
+    color: #e0e0e0 !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Main Container Elevation */
+.list-container {
+    background-color: #181818 !important;
+    border: 1px solid #242424 !important;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+}
+
+/* Navigation & Status Menu */
+.status-menu-container {
+    background-color: #1c1c1c !important;
+    border-bottom: 1px solid #282828 !important;
+    border-radius: 8px 8px 0 0;
+}
+
+.status-menu-container .status-menu .status-button {
+    color: #8e8e93 !important;
+    font-weight: 500;
+    transition: color 0.25s ease;
+}
+
+.status-menu-container .status-menu .status-button:hover {
+    color: #ffffff !important;
+}
+
+.status-menu-container .status-menu .status-button.on {
+    color: #ffffff !important;
+    font-weight: 600;
+}
+
+/* --- FIXED: Borderless Column Headers --- */
+.list-table {
+    border-color: transparent !important;
+}
+
+.list-table-header {
+    background-color: #1c1c1c !important;
+}
+
+.list-table-header .header-title {
+    background-image: none !important;        /* Erases default PNG lines */
+    background-color: transparent !important;
+    border-left: none !important;
+    border-top: none !important;
+    border-right: none !important;              /* Removes all vertical separators */
+    border-bottom: 2px solid #282828 !important; /* Elegant horizontal separation rule */
+    color: #a1a1aa !important;
+    text-transform: uppercase;
+    font-size: 11px !important;
+    letter-spacing: 0.05em;
+    padding: 12px 0 !important;
+}
+
+.header-title .link,
+.header-title .link.sort {
+    color: #a1a1aa !important;
+    transition: color 0.2s ease;
+}
+
+.header-title .link:hover {
+    color: #ffffff !important;
+}
+
+/* Rows & Alternating Backgrounds */
+.list-table > tbody:nth-of-type(2n+1) {
+    background-color: #141414 !important;
+}
+
+.list-table > tbody:nth-of-type(2n) {
+    background-color: #181818 !important;
+}
+
+/* --- FIXED: Row Border Interaction --- */
+.list-table .list-table-data {
+    transition: outline 0.15s ease;
+    outline: 1px solid transparent;
+}
+
+.list-table .list-table-data:hover {
+    background-color: transparent !important;
+    outline: 1px solid #3a3a3a !important;
+    outline-offset: -1px;
+}
+
+.list-table .list-table-data .data {
+    border-bottom: 1px solid #242424 !important;
+    color: #e4e4e7 !important;
+    padding: 10px 0 !important;
+}
+
+/* Premium Typography & Links */
+a {
+    color: #79a1eb !important;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #a5c2f5 !important;
+}
+
+/* Smooth Thumbnail Zoom Feature */
+.list-table .list-table-data .data.image {
+    overflow: visible !important;
+}
+
+.list-table .list-table-data .data.image img {
+    border-radius: 6px;
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s ease;
+}
+
+.list-table .list-table-data .data.image:hover img {
+    transform: scale(1.35);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+    position: relative;
+    z-index: 99;
+}
+
+/* Misc UI Cleanups */
+.edit-disabled,
+.more-content {
+    color: #a1a1aa !important;
+}
+
+footer {
+    visibility: hidden;
+}
