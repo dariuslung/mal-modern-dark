@@ -1,135 +1,298 @@
 /* Base Layout & Typography */
 body {
-    background-color: #121212 !important;
-    color: #e0e0e0 !important;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #121212 !important;
+  color: #e0e0e0 !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
-/* Main Container Elevation */
+/* Main Container Elevation & Width Locking */
 .list-container {
-    background-color: #181818 !important;
-    border: 1px solid #242424 !important;
-    border-radius: 12px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
-    padding: 20px;
+  background-color: #181818 !important;
+  border: 1px solid #242424 !important;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  max-width: 1024px !important; /* Locks layout to uniform grid specifications */
+  margin: 0 auto !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
 }
 
-/* Navigation & Status Menu */
-.status-menu-container {
-    background-color: #1c1c1c !important;
-    border-bottom: 1px solid #282828 !important;
-    border-radius: 8px 8px 0 0;
+/* --- FIXED: Centered & Overhauled Status Menu (No Underlines) --- */
+.status-menu-container,
+.status-menu-container.sticky {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  width: 100% !important;
+  background-color: #1c1c1c !important;
+  border-bottom: 1px solid #282828 !important;
+  border-radius: 8px 8px 0 0;
+  box-shadow: none !important;
+  height: 48px !important;
+  display: flex !important;
+  align-items: center !important;
 }
 
+/* Centers the button group perfectly inside the bar container */
+.status-menu-container .status-menu {
+  display: flex !important;
+  justify-content: center !important; 
+  align-items: center !important;
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  gap: 4px !important;
+}
+
+/* Premium Pill Button Redesign */
 .status-menu-container .status-menu .status-button {
-    color: #8e8e93 !important;
-    font-weight: 500;
-    transition: color 0.25s ease;
+  color: #a1a1aa !important;
+  font-weight: 500 !important;
+  font-size: 13px !important;
+  padding: 6px 14px !important;
+  margin: 0 !important;
+  border-radius: 20px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  border: none !important;
+  background-color: transparent !important;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  text-decoration: none !important;
 }
 
+/* Strips native blue bar indicators / pseudo underlines entirely */
+.status-menu-container .status-menu .status-button::after,
+.status-menu-container .status-menu .status-button.on::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* Hover State Glow */
 .status-menu-container .status-menu .status-button:hover {
-    color: #ffffff !important;
+  color: #ffffff !important;
+  background-color: rgba(255, 255, 255, 0.05) !important;
 }
 
+/* Premium Active Pill State (Replaces the harsh blue bar look) */
 .status-menu-container .status-menu .status-button.on {
-    color: #ffffff !important;
-    font-weight: 600;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  background-color: #2a2a2a !important;
+  border: 1px solid #3a3a3a !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
 }
 
-/* --- FIXED: Borderless Column Headers --- */
+/* --- FIXED: Width Alignment Overhaul & Seamless Dropdowns --- */
+.list-block {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.list-unit {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+}
+
+.list-status-title {
+  width: 100% !important;
+  box-sizing: border-box !important;
+  margin: 0 !important; /* Wipes bottom margin to prevent dropdown disconnect */
+}
+
+/* FIXED: Seamlessly locks the stats box panel directly underneath the blue bar */
+#list-stats, 
+.list-stats {
+  width: 100% !important;
+  box-sizing: border-box !important;
+  margin: 0 0 16px 0 !important; /* Pushes downstream data table down safely */
+  background-color: #4065BA !important; /* Preserves uniform panel background */
+  border-radius: 0 0 8px 8px !important;
+}
+
+/* Sibling configuration: if stats is closed, add structural margin directly to the table */
+.list-status-title + .list-table {
+  margin-top: 16px !important;
+}
+
 .list-table {
-    border-color: transparent !important;
+  width: 100% !important;
+  margin: 0 !important;
+  border-collapse: collapse !important;
+  border-color: transparent !important;
 }
 
+/* Borderless Modern Column Headers */
 .list-table-header {
-    background-color: #1c1c1c !important;
+  background-color: #1c1c1c !important;
 }
 
 .list-table-header .header-title {
-    background-image: none !important;        /* Erases default PNG lines */
-    background-color: transparent !important;
-    border-left: none !important;
-    border-top: none !important;
-    border-right: none !important;              /* Removes all vertical separators */
-    border-bottom: 2px solid #282828 !important; /* Elegant horizontal separation rule */
-    color: #a1a1aa !important;
-    text-transform: uppercase;
-    font-size: 11px !important;
-    letter-spacing: 0.05em;
-    padding: 12px 0 !important;
+  background-image: none !important;
+  background-color: transparent !important;
+  border-left: none !important;
+  border-top: none !important;
+  border-right: none !important;
+  border-bottom: 2px solid #282828 !important;
+  color: #a1a1aa !important;
+  text-transform: uppercase;
+  font-size: 11px !important;
+  letter-spacing: 0.05em;
+  padding: 12px 0 !important;
 }
 
-.header-title .link,
+.header-title .link, 
 .header-title .link.sort {
-    color: #a1a1aa !important;
-    transition: color 0.2s ease;
+  color: #a1a1aa !important;
+  transition: color 0.2s ease;
 }
 
 .header-title .link:hover {
-    color: #ffffff !important;
+  color: #ffffff !important;
 }
 
 /* Rows & Alternating Backgrounds */
 .list-table > tbody:nth-of-type(2n+1) {
-    background-color: #141414 !important;
+  background-color: #141414 !important;
 }
 
 .list-table > tbody:nth-of-type(2n) {
-    background-color: #181818 !important;
+  background-color: #181818 !important;
 }
 
-/* --- FIXED: Row Border Interaction --- */
+/* Row Border Interaction */
 .list-table .list-table-data {
-    transition: outline 0.15s ease;
-    outline: 1px solid transparent;
+  transition: outline 0.15s ease;
+  outline: 1px solid transparent;
 }
 
 .list-table .list-table-data:hover {
-    background-color: transparent !important;
-    outline: 1px solid #3a3a3a !important;
-    outline-offset: -1px;
+  background-color: transparent !important;
+  outline: 1px solid #3a3a3a !important;
+  outline-offset: -1px;
 }
 
 .list-table .list-table-data .data {
-    border-bottom: 1px solid #242424 !important;
-    color: #e4e4e7 !important;
-    padding: 10px 0 !important;
+  border-bottom: 1px solid #242424 !important;
+  color: #e4e4e7 !important;
+  padding: 10px 0 !important;
 }
 
 /* Premium Typography & Links */
 a {
-    color: #79a1eb !important;
-    text-decoration: none;
-    transition: color 0.2s ease;
+  color: #79a1eb !important;
+  text-decoration: none;
+  transition: color 0.2s ease;
 }
 
 a:hover {
-    color: #a5c2f5 !important;
+  color: #a5c2f5 !important;
+}
+
+/* Expanding Search Container & Centered Input Text */
+.search-container {
+  position: absolute !important;
+  right: 16px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  display: flex !important;
+  align-items: center !important;
+  background-color: #1c1c1c !important;
+  border: 1px solid #2a2a2a !important;
+  border-radius: 20px !important;
+  width: 110px !important;
+  height: 30px !important;
+  transition: width 0.3s cubic-bezier(0.25, 1, 0.5, 1), 
+              border-color 0.2s ease, 
+              box-shadow 0.2s ease !important;
+  z-index: 10 !important;
+}
+
+.search-container:focus-within {
+  width: 240px !important;
+  border-color: #48618c !important;
+  box-shadow: 0 0 0 3px rgba(121, 161, 235, 0.15) !important;
+  background-color: #222222 !important;
+}
+
+#search-box {
+  flex: 1 !important;
+  display: flex !important;
+  align-items: center !important;
+  height: 100% !important;
+  float: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#search-box input[type="text"] {
+  box-sizing: border-box !important;
+  width: 100% !important;
+  height: 18px !important;
+  line-height: 18px !important;
+  background: transparent !important;
+  border: none !important;
+  outline: none !important;
+  color: #ffffff !important;
+  font-size: 12px !important;
+  padding: 0 0 0 14px !important;
+  margin: 0 !important;
+}
+
+#search-box input[type="text"]::placeholder {
+  color: #71717a !important;
+}
+
+#search-button {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  float: none !important;
+  height: 100% !important;
+  width: auto !important;
+  padding: 0 12px 0 6px !important;
+  margin: 0 !important;
+  color: #a1a1aa !important;
+  text-decoration: none !important;
+  line-height: 1 !important;
+  transition: color 0.2s ease !important;
+}
+
+#search-button:hover {
+  color: #ffffff !important;
+}
+
+#search-button .fa-magnifying-glass {
+  font-size: 13px !important;
+  display: inline-block !important;
 }
 
 /* Smooth Thumbnail Zoom Feature */
 .list-table .list-table-data .data.image {
-    overflow: visible !important;
+  overflow: visible !important;
 }
 
 .list-table .list-table-data .data.image img {
-    border-radius: 6px;
-    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s ease;
+  border-radius: 6px;
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s ease;
 }
 
 .list-table .list-table-data .data.image:hover img {
-    transform: scale(1.35);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
-    position: relative;
-    z-index: 99;
+  transform: scale(1.35);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+  position: relative;
+  z-index: 99;
 }
 
 /* Misc UI Cleanups */
-.edit-disabled,
+.edit-disabled, 
 .more-content {
-    color: #a1a1aa !important;
+  color: #a1a1aa !important;
 }
 
 footer {
-    visibility: hidden;
+  visibility: hidden;
 }
