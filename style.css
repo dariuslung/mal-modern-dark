@@ -183,6 +183,7 @@ body {
 }
 
 .list-table .list-table-data .data {
+  position: relative !important;
   border-bottom: 1px solid #242424 !important;
   color: #e4e4e7 !important;
   padding: 10px 0 !important;
@@ -297,6 +298,19 @@ a:hover {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
   position: relative;
   z-index: 99;
+}
+
+/* --- UPDATED: Vertically Centered Add-Edit-More Controls with Spacing --- */
+.add-edit-more {
+  float: none !important;
+  position: absolute !important;
+  right: 10px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  margin-right: 0 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 5px !important;
 }
 
 /* Misc UI Cleanups */
