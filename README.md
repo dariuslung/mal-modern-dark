@@ -2,9 +2,10 @@
 
 A sleek, premium, performance-optimized dark theme overhaul for MyAnimeList. This theme focuses on modern typography, clean borderless headers, custom animated interactions, and dynamic thumbnail zoom scaling.
 
+
 ## Preview
 
-<img width="1134" height="606" alt="image" src="https://github.com/user-attachments/assets/b9a90940-c616-4ea9-9fde-71c770463e5d" />
+<img width="1145" height="615" alt="image" src="https://github.com/user-attachments/assets/5536234a-49d4-4ced-845a-b2021375cf29" />
 
 
 ## Installation
