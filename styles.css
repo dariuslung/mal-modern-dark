@@ -93,9 +93,9 @@ body {
 .status-menu-container .status-menu .status-button.on {
   color: #ffffff !important;
   font-weight: 600 !important;
-  background-color: #2a2a2a !important;
-  border: 1px solid #3a3a3a !important;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+  background-color: #2e51a2 !important;
+  border: 1px solid #4065BA !important;
+  box-shadow: 0 4px 12px rgba(46, 81, 162, 0.4) !important;
 }
 
 /* --- FIXED: Width Alignment Overhaul & Seamless Dropdowns --- */
@@ -115,14 +115,90 @@ body {
   width: 100% !important;
   box-sizing: border-box !important;
   margin: 0 !important; /* Wipes bottom margin to prevent dropdown disconnect */
+  background-color: #262626 !important;
+  border: 1px solid #3a3a3a !important;
+  border-top: 3px solid #4065BA !important; /* MAL Brand Blue Top Border */
+  border-radius: 8px !important;
+  height: 44px !important;
+  display: table !important;
 }
 
-/* FIXED: Seamlessly locks the stats box panel directly underneath the blue bar */
+.list-unit .list-status-title .text {
+  display: table-cell !important;
+  vertical-align: middle !important;
+  height: 41px !important; /* Adjust height slightly to account for 3px top border */
+  color: #ffffff !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+}
+
+.list-status-title .stats {
+  position: absolute !important;
+  right: 16px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  height: auto !important;
+  line-height: normal !important;
+}
+
+.list-status-title .stats a {
+  color: #a1a1aa !important;
+  font-size: 11px !important;
+  font-weight: 500 !important;
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid #3a3a3a !important;
+  border-radius: 14px !important;
+  padding: 5px 12px !important;
+  transition: all 0.2s ease !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  text-decoration: none !important;
+}
+
+.list-status-title .stats a:hover {
+  color: #ffffff !important;
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border-color: #3d3d3d !important;
+}
+
+.list-status-title .stats a.filterd {
+  color: #ffffff !important;
+  background-color: #4065BA !important;
+  border-color: #5579cd !important;
+  box-shadow: 0 2px 8px rgba(64, 101, 186, 0.3) !important;
+}
+
+/* FIXED: Seamlessly locks the stats box panel directly underneath the title bar */
 #list-stats, 
 .list-stats {
   width: 100% !important;
   box-sizing: border-box !important;
-  background-color: #4065BA !important; /* Preserves uniform panel background */
+  background-color: #1e1e1e !important;
+  border: 1px solid #3a3a3a !important;
+  margin-top: 8px !important; /* Separates the stats box from the status title card */
+  color: #e0e0e0 !important;
+  font-size: 11px !important;
+  height: auto !important;
+  line-height: 20px !important;
+  padding: 8px 16px !important;
+  border-radius: 8px !important;
+}
+
+#list-stats a,
+.list-stats a {
+  color: #79a1eb !important;
+}
+
+#list-stats a:hover,
+.list-stats a:hover {
+  color: #a5c2f5 !important;
 }
 
 /* Sibling configuration: if stats is closed, add structural margin directly to the table */
@@ -227,8 +303,8 @@ a:hover {
 
 .search-container:focus-within {
   width: 240px !important;
-  border-color: #48618c !important;
-  box-shadow: 0 0 0 3px rgba(121, 161, 235, 0.15) !important;
+  border-color: #4065BA !important;
+  box-shadow: 0 0 0 3px rgba(64, 101, 186, 0.25) !important;
   background-color: #222222 !important;
 }
 
@@ -336,4 +412,251 @@ a:hover {
 
 footer {
   visibility: hidden;
+}
+
+/* --- OVERHAUL: Advanced Options & Filter Menu --- */
+#advanced-options {
+  background-color: #181818 !important;
+  border: 1px solid #242424 !important;
+  border-radius: 12px !important;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6) !important;
+  color: #e0e0e0 !important;
+  padding: 24px !important;
+  width: 860px !important;
+  box-sizing: border-box !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+}
+
+#advanced-options .advanced-options-header {
+  color: #ffffff !important;
+  border-bottom: 1px solid #282828 !important;
+  padding-bottom: 12px !important;
+  margin-bottom: 20px !important;
+  font-weight: 600 !important;
+  font-size: 16px !important;
+}
+
+#advanced-options .advanced-options-header .description {
+  color: #a1a1aa !important;
+  font-size: 12px !important;
+  font-weight: normal !important;
+  margin-left: 10px !important;
+}
+
+/* Widgets Layout */
+#advanced-options .filter-widget,
+#advanced-options .sort-widget {
+  padding: 10px 0 !important;
+}
+
+#advanced-options .filter-widget:last-of-type,
+#advanced-options .sort-widget:last-of-type {
+  padding-bottom: 16px !important;
+}
+
+#advanced-options .filter-widget .widget-header,
+#advanced-options .sort-widget .widget-header {
+  color: #e0e0e0 !important;
+  font-weight: 600 !important;
+  font-size: 12px !important;
+  width: 120px !important;
+  display: inline-block !important;
+}
+
+/* Form Controls styling */
+#advanced-options select {
+  background-color: #1e1e1e !important;
+  border: 1px solid #3a3a3a !important;
+  color: #ffffff !important;
+  border-radius: 6px !important;
+  height: 28px !important;
+  padding: 4px 28px 4px 10px !important;
+  font-size: 12px !important;
+  box-sizing: border-box !important;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
+  appearance: none !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23a1a1aa'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E") !important;
+  background-size: 12px !important;
+  background-repeat: no-repeat !important;
+  background-position: calc(100% - 10px) center !important;
+}
+
+#advanced-options select:focus,
+#advanced-options input[type=text]:focus {
+  border-color: #4065BA !important;
+  box-shadow: 0 0 0 2px rgba(64, 101, 186, 0.25) !important;
+  outline: none !important;
+}
+
+#advanced-options input[type=text] {
+  background-color: #1e1e1e !important;
+  border: 1px solid #3a3a3a !important;
+  color: #ffffff !important;
+  border-radius: 6px !important;
+  height: 28px !important;
+  box-sizing: border-box !important;
+  padding: 4px 10px !important;
+  font-size: 12px !important;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+#advanced-options select option {
+  background-color: #1e1e1e !important;
+  color: #ffffff !important;
+}
+
+#advanced-options select:disabled {
+  background-color: #141414 !important;
+  color: #71717a !important;
+  border-color: #242424 !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2352525b'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E") !important;
+}
+
+/* Radio Button Redesign for Sort Widget */
+#advanced-options .sort-widget input[type=radio] {
+  display: none !important;
+}
+
+#advanced-options .sort-widget input[type=radio] + label {
+  background-color: #1e1e1e !important;
+  border: 1px solid #3a3a3a !important;
+  color: #a1a1aa !important;
+  border-radius: 6px !important;
+  width: 75px !important;
+  height: 28px !important;
+  padding: 0 !important;
+  font-size: 11px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 6px !important;
+  margin-right: 6px !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  box-sizing: border-box !important;
+}
+
+#advanced-options .sort-widget input[type=radio] + label:hover {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  color: #ffffff !important;
+  border-color: #52525b !important;
+}
+
+#advanced-options .sort-widget input[type=radio]:checked + label {
+  background-color: #2e51a2 !important;
+  border-color: #4065BA !important;
+  color: #ffffff !important;
+  box-shadow: 0 0 0 1px #4065BA !important;
+}
+
+#advanced-options .sort-widget input[type=radio]:disabled + label {
+  background-color: #141414 !important;
+  border-color: #242424 !important;
+  color: #52525b !important;
+  cursor: not-allowed !important;
+}
+
+/* Filter Widget Date elements text */
+#advanced-options .filter-widget.aired-date .text,
+#advanced-options .filter-widget.published-date .text {
+  color: #a1a1aa !important;
+  font-size: 11px !important;
+  margin-right: 8px !important;
+  margin-left: 2px !important;
+}
+
+/* Action Buttons (Apply, Clear) */
+#advanced-options .advanced-options-button {
+  margin-top: 24px !important;
+  padding: 16px 0 0 0 !important;
+  border-top: 1px solid #282828 !important;
+  text-align: center !important;
+}
+
+#advanced-options .btn-apply,
+#advanced-options .btn-clear {
+  width: 135px !important;
+  height: 34px !important;
+  line-height: 32px !important;
+  padding: 0 !important;
+  font-size: 12px !important;
+  border-radius: 20px !important;
+  font-weight: 600 !important;
+  display: inline-block !important;
+  box-sizing: border-box !important;
+  transition: all 0.2s ease !important;
+  text-decoration: none !important;
+}
+
+#advanced-options .btn-apply {
+  background-color: #2e51a2 !important;
+  border: 1px solid #4065BA !important;
+  color: #ffffff !important;
+}
+
+#advanced-options .btn-apply:hover {
+  background-color: #3b62c1 !important;
+  box-shadow: 0 4px 12px rgba(46, 81, 162, 0.4) !important;
+}
+
+#advanced-options .btn-clear {
+  background-color: transparent !important;
+  border: 1px solid #3a3a3a !important;
+  color: #a1a1aa !important;
+}
+
+#advanced-options .btn-clear:hover {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  border-color: #52525b !important;
+  color: #ffffff !important;
+}
+
+/* Fancybox Close Button Modernization */
+#fancybox-close {
+  color: #a1a1aa !important;
+  background-image: none !important;
+  width: 32px !important;
+  height: 32px !important;
+  top: 16px !important;
+  right: 16px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: all 0.2s ease !important;
+  text-decoration: none !important;
+  background-color: rgba(255, 255, 255, 0.03) !important;
+  border: 1px solid #2d2d2d !important;
+  border-radius: 50% !important;
+}
+
+#fancybox-close::before {
+  content: "\f00d" !important;
+  font-family: "Font Awesome 6 Free" !important;
+  font-weight: 900 !important;
+  font-size: 14px !important;
+}
+
+#fancybox-close:hover {
+  color: #ffffff !important;
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  border-color: #3d3d3d !important;
+}
+
+/* --- PREMIUM INTERFACES: Custom Scrollbars --- */
+::-webkit-scrollbar {
+  width: 8px !important;
+  height: 8px !important;
+}
+
+::-webkit-scrollbar-track {
+  background: #121212 !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2a2a2a !important;
+  border-radius: 4px !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3a3a3a !important;
 }
