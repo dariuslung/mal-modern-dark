@@ -93,9 +93,9 @@ body {
 .status-menu-container .status-menu .status-button.on {
   color: #ffffff !important;
   font-weight: 600 !important;
-  background-color: #2e51a2 !important;
-  border: 1px solid #4065BA !important;
-  box-shadow: 0 4px 12px rgba(46, 81, 162, 0.4) !important;
+  background-color: #2a2a2a !important;
+  border: 1px solid #3a3a3a !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
 }
 
 /* --- FIXED: Width Alignment Overhaul & Seamless Dropdowns --- */
