@@ -5,7 +5,7 @@ A sleek, premium, performance-optimized dark theme overhaul for MyAnimeList. Thi
 
 ## Preview
 
-<img width="1145" height="615" alt="image" src="https://github.com/user-attachments/assets/5536234a-49d4-4ced-845a-b2021375cf29" />
+<img width="1102" height="608" alt="image" src="https://github.com/user-attachments/assets/4bafbb8f-c9e2-47fd-abb3-a471c7303884" />
 
 
 ## Installation
