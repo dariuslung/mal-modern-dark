@@ -142,7 +142,7 @@ body {
   transform: translateY(-50%) !important;
   display: inline-flex !important;
   align-items: center !important;
-  gap: 8px !important;
+  gap: 4px !important;
   height: auto !important;
   line-height: normal !important;
 }
@@ -151,10 +151,10 @@ body {
   color: #a1a1aa !important;
   font-size: 11px !important;
   font-weight: 500 !important;
-  background-color: rgba(255, 255, 255, 0.05) !important;
-  border: 1px solid #3a3a3a !important;
-  border-radius: 14px !important;
-  padding: 5px 12px !important;
+  background-color: transparent !important;
+  border: 1px solid transparent !important;
+  border-radius: 6px !important;
+  padding: 5px 8px !important;
   transition: all 0.2s ease !important;
   display: inline-flex !important;
   align-items: center !important;
@@ -164,8 +164,8 @@ body {
 
 .list-status-title .stats a:hover {
   color: #ffffff !important;
-  background-color: rgba(255, 255, 255, 0.1) !important;
-  border-color: #3d3d3d !important;
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  border-color: transparent !important;
 }
 
 .list-status-title .stats a.filterd {
